@@ -8,232 +8,291 @@
     <title>Color-pixel</title>
 </head>
 
-<body>
+
+<body class="color-choose">
     <h1 id="heading"><u>Pixel Art</u></h1>
     <h2>Red</h2>
-    <input type="range" id="red" min="0" max="255" value="250" class="slider">
-    <h2>Green</h2>
-    <input type="range" id="green" min="0" max="255"  value="50" class="slider">
-    <h2>Blue</h2>
-    <input type="range" id="blue" min="0" max="255" value="132" class="slider">
+    <div class="color-choose">
+        <input type="range" id="red" min="0" max="255" value="250" class="slider">
+        <span class="color-value" id="red-data">
+            <div>250</div>
+        </span>
+    </div>
+    <div class="color-choose">
+        <h2>Green</h2>
+        <input type="range" id="green" min="0" max="255" value="50" class="slider">
+        <span class="color-value" id="green-data">
+            <div>50</div>
+        </span>
+    </div>
+    <div class="color-choose">
+        <h2>Blue</h2>
+        <input type="range" id="blue" min="0" max="255" value="132" class="slider">
+        <span class="color-value" id="blue-data">
+            <div>132</div>
+        </span>
+    </div>
+    
+    <div class="card">
+        <div id="show"></div>
 
-    <div id="show"></div>
+        <table id="drawing-area">
+            <tr>
+                <td class="colored" onclick="color(0)"></td>
+                <td class="colored" onclick="color(1)"></td>
+                <td class="colored" onclick="color(2)"></td>
+                <td class="colored" onclick="color(3)"></td>
+                <td class="colored" onclick="color(4)"></td>
+                <td class="colored" onclick="color(5)"></td>
+                <td class="colored" onclick="color(6)"></td>
+                <td class="colored" onclick="color(7)"></td>
+                <td class="colored" onclick="color(8)"></td>
+                <td class="colored" onclick="color(9)"></td>
+                <td class="colored" onclick="color(10)"></td>
+                <td class="colored" onclick="color(11)"></td>
+            </tr>
+            <tr>
+                <td class="colored" onclick="color(12)"></td>
+                <td class="colored" onclick="color(13)"></td>
+                <td class="colored" onclick="color(14)"></td>
+                <td class="colored" onclick="color(15)"></td>
+                <td class="colored" onclick="color(16)"></td>
+                <td class="colored" onclick="color(17)"></td>
+                <td class="colored" onclick="color(18)"></td>
+                <td class="colored" onclick="color(19)"></td>
+                <td class="colored" onclick="color(20)"></td>
+                <td class="colored" onclick="color(21)"></td>
+                <td class="colored" onclick="color(22)"></td>
+                <td class="colored" onclick="color(23)"></td>
+            </tr>
+            <tr>
+                <td class="colored" onclick="color(24)"></td>
+                <td class="colored" onclick="color(25)"></td>
+                <td class="colored" onclick="color(26)"></td>
+                <td class="colored" onclick="color(27)"></td>
+                <td class="colored" onclick="color(28)"></td>
+                <td class="colored" onclick="color(29)"></td>
+                <td class="colored" onclick="color(30)"></td>
+                <td class="colored" onclick="color(31)"></td>
+                <td class="colored" onclick="color(32)"></td>
+                <td class="colored" onclick="color(33)"></td>
+                <td class="colored" onclick="color(34)"></td>
+                <td class="colored" onclick="color(35)"></td>
+            </tr>
+            <tr>
+                <td class="colored" onclick="color(36)"></td>
+                <td class="colored" onclick="color(37)"></td>
+                <td class="colored" onclick="color(38)"></td>
+                <td class="colored" onclick="color(39)"></td>
+                <td class="colored" onclick="color(40)"></td>
+                <td class="colored" onclick="color(41)"></td>
+                <td class="colored" onclick="color(42)"></td>
+                <td class="colored" onclick="color(43)"></td>
+                <td class="colored" onclick="color(44)"></td>
+                <td class="colored" onclick="color(45)"></td>
+                <td class="colored" onclick="color(46)"></td>
+                <td class="colored" onclick="color(47)"></td>
+            </tr>
+            <tr>
+                <td class="colored" onclick="color(48)"></td>
+                <td class="colored" onclick="color(49)"></td>
+                <td class="colored" onclick="color(50)"></td>
+                <td class="colored" onclick="color(51)"></td>
+                <td class="colored" onclick="color(52)"></td>
+                <td class="colored" onclick="color(53)"></td>
+                <td class="colored" onclick="color(54)"></td>
+                <td class="colored" onclick="color(55)"></td>
+                <td class="colored" onclick="color(56)"></td>
+                <td class="colored" onclick="color(57)"></td>
+                <td class="colored" onclick="color(58)"></td>
+                <td class="colored" onclick="color(59)"></td>
 
-    <table>
-        <tr>
-            <td class="colored" onclick="color(0)"></td>
-            <td class="colored" onclick="color(1)"></td>
-            <td class="colored" onclick="color(2)"></td>
-            <td class="colored" onclick="color(3)"></td>
-            <td class="colored" onclick="color(4)"></td>
-            <td class="colored" onclick="color(5)"></td>
-            <td class="colored" onclick="color(6)"></td>
-            <td class="colored" onclick="color(7)"></td>
-            <td class="colored" onclick="color(8)"></td>
-            <td class="colored" onclick="color(9)"></td>
-            <td class="colored" onclick="color(10)"></td>
-            <td class="colored" onclick="color(11)"></td>
-        </tr>
-        <tr>
-            <td class="colored" onclick="color(12)"></td>
-            <td class="colored" onclick="color(13)"></td>
-            <td class="colored" onclick="color(14)"></td>
-            <td class="colored" onclick="color(15)"></td>
-            <td class="colored" onclick="color(16)"></td>
-            <td class="colored" onclick="color(17)"></td>
-            <td class="colored" onclick="color(18)"></td>
-            <td class="colored" onclick="color(19)"></td>
-            <td class="colored" onclick="color(20)"></td>
-            <td class="colored" onclick="color(21)"></td>
-            <td class="colored" onclick="color(22)"></td>
-            <td class="colored" onclick="color(23)"></td>
-        </tr>
-        <tr>
-            <td class="colored" onclick="color(24)"></td>
-            <td class="colored" onclick="color(25)"></td>
-            <td class="colored" onclick="color(26)"></td>
-            <td class="colored" onclick="color(27)"></td>
-            <td class="colored" onclick="color(28)"></td>
-            <td class="colored" onclick="color(29)"></td>
-            <td class="colored" onclick="color(30)"></td>
-            <td class="colored" onclick="color(31)"></td>
-            <td class="colored" onclick="color(32)"></td>
-            <td class="colored" onclick="color(33)"></td>
-            <td class="colored" onclick="color(34)"></td>
-            <td class="colored" onclick="color(35)"></td>
-        </tr>
-        <tr>
-            <td class="colored" onclick="color(36)"></td>
-            <td class="colored" onclick="color(37)"></td>
-            <td class="colored" onclick="color(38)"></td>
-            <td class="colored" onclick="color(39)"></td>
-            <td class="colored" onclick="color(40)"></td>
-            <td class="colored" onclick="color(41)"></td>
-            <td class="colored" onclick="color(42)"></td>
-            <td class="colored" onclick="color(43)"></td>
-            <td class="colored" onclick="color(44)"></td>
-            <td class="colored" onclick="color(45)"></td>
-            <td class="colored" onclick="color(46)"></td>
-            <td class="colored" onclick="color(47)"></td>
-        </tr>
-        <tr>
-            <td class="colored" onclick="color(48)"></td>
-            <td class="colored" onclick="color(49)"></td>
-            <td class="colored" onclick="color(50)"></td>
-            <td class="colored" onclick="color(51)"></td>
-            <td class="colored" onclick="color(52)"></td>
-            <td class="colored" onclick="color(53)"></td>
-            <td class="colored" onclick="color(54)"></td>
-            <td class="colored" onclick="color(55)"></td>
-            <td class="colored" onclick="color(56)"></td>
-            <td class="colored" onclick="color(57)"></td>
-            <td class="colored" onclick="color(58)"></td>
-            <td class="colored" onclick="color(59)"></td>
+            </tr>
+            <tr>
+                <td class="colored" onclick="color(60)"></td>
+                <td class="colored" onclick="color(61)"></td>
+                <td class="colored" onclick="color(62)"></td>
+                <td class="colored" onclick="color(63)"></td>
+                <td class="colored" onclick="color(64)"></td>
+                <td class="colored" onclick="color(65)"></td>
+                <td class="colored" onclick="color(66)"></td>
+                <td class="colored" onclick="color(67)"></td>
+                <td class="colored" onclick="color(68)"></td>
+                <td class="colored" onclick="color(69)"></td>
+                <td class="colored" onclick="color(70)"></td>
+                <td class="colored" onclick="color(71)"></td>
+            </tr>
+            <tr>
+                <td class="colored" onclick="color(72)"></td>
+                <td class="colored" onclick="color(73)"></td>
+                <td class="colored" onclick="color(74)"></td>
+                <td class="colored" onclick="color(75)"></td>
+                <td class="colored" onclick="color(76)"></td>
+                <td class="colored" onclick="color(77)"></td>
+                <td class="colored" onclick="color(78)"></td>
+                <td class="colored" onclick="color(79)"></td>
+                <td class="colored" onclick="color(80)"></td>
+                <td class="colored" onclick="color(81)"></td>
+                <td class="colored" onclick="color(82)"></td>
+                <td class="colored" onclick="color(83)"></td>
 
-        </tr>
-        <tr>
-            <td class="colored" onclick="color(60)"></td>
-            <td class="colored" onclick="color(61)"></td>
-            <td class="colored" onclick="color(62)"></td>
-            <td class="colored" onclick="color(63)"></td>
-            <td class="colored" onclick="color(64)"></td>
-            <td class="colored" onclick="color(65)"></td>
-            <td class="colored" onclick="color(66)"></td>
-            <td class="colored" onclick="color(67)"></td>
-            <td class="colored" onclick="color(68)"></td>
-            <td class="colored" onclick="color(69)"></td>
-            <td class="colored" onclick="color(70)"></td>
-            <td class="colored" onclick="color(71)"></td>
-        </tr>
-        <tr>
-            <td class="colored" onclick="color(72)"></td>
-            <td class="colored" onclick="color(73)"></td>
-            <td class="colored" onclick="color(74)"></td>
-            <td class="colored" onclick="color(75)"></td>
-            <td class="colored" onclick="color(76)"></td>
-            <td class="colored" onclick="color(77)"></td>
-            <td class="colored" onclick="color(78)"></td>
-            <td class="colored" onclick="color(79)"></td>
-            <td class="colored" onclick="color(80)"></td>
-            <td class="colored" onclick="color(81)"></td>
-            <td class="colored" onclick="color(82)"></td>
-            <td class="colored" onclick="color(83)"></td>
+            </tr>
+            <tr>
+                <td class="colored" onclick="color(84)"></td>
+                <td class="colored" onclick="color(85)"></td>
+                <td class="colored" onclick="color(86)"></td>
+                <td class="colored" onclick="color(87)"></td>
+                <td class="colored" onclick="color(88)"></td>
+                <td class="colored" onclick="color(89)"></td>
+                <td class="colored" onclick="color(90)"></td>
+                <td class="colored" onclick="color(91)"></td>
+                <td class="colored" onclick="color(92)"></td>
+                <td class="colored" onclick="color(93)"></td>
+                <td class="colored" onclick="color(94)"></td>
+                <td class="colored" onclick="color(95)"></td>
+            </tr>
+            <tr>
+                <td class="colored" onclick="color(96)"></td>
+                <td class="colored" onclick="color(97)"></td>
+                <td class="colored" onclick="color(98)"></td>
+                <td class="colored" onclick="color(99)"></td>
+                <td class="colored" onclick="color(100)"></td>
+                <td class="colored" onclick="color(101)"></td>
+                <td class="colored" onclick="color(102)"></td>
+                <td class="colored" onclick="color(103)"></td>
+                <td class="colored" onclick="color(104)"></td>
+                <td class="colored" onclick="color(105)"></td>
+                <td class="colored" onclick="color(106)"></td>
+                <td class="colored" onclick="color(107)"></td>
 
-        </tr>
-        <tr>
-            <td class="colored" onclick="color(84)"></td>
-            <td class="colored" onclick="color(85)"></td>
-            <td class="colored" onclick="color(86)"></td>
-            <td class="colored" onclick="color(87)"></td>
-            <td class="colored" onclick="color(88)"></td>
-            <td class="colored" onclick="color(89)"></td>
-            <td class="colored" onclick="color(90)"></td>
-            <td class="colored" onclick="color(91)"></td>
-            <td class="colored" onclick="color(92)"></td>
-            <td class="colored" onclick="color(93)"></td>
-            <td class="colored" onclick="color(94)"></td>
-            <td class="colored" onclick="color(95)"></td>
-        </tr>
-        <tr>
-            <td class="colored" onclick="color(96)"></td>
-            <td class="colored" onclick="color(97)"></td>
-            <td class="colored" onclick="color(98)"></td>
-            <td class="colored" onclick="color(99)"></td>
-            <td class="colored" onclick="color(100)"></td>
-            <td class="colored" onclick="color(101)"></td>
-            <td class="colored" onclick="color(102)"></td>
-            <td class="colored" onclick="color(103)"></td>
-            <td class="colored" onclick="color(104)"></td>
-            <td class="colored" onclick="color(105)"></td>
-            <td class="colored" onclick="color(106)"></td>
-            <td class="colored" onclick="color(107)"></td>
+            </tr>
+            <tr>
+                <td class="colored" onclick="color(108)"></td>
+                <td class="colored" onclick="color(109)"></td>
+                <td class="colored" onclick="color(110)"></td>
+                <td class="colored" onclick="color(111)"></td>
+                <td class="colored" onclick="color(112)"></td>
+                <td class="colored" onclick="color(113)"></td>
+                <td class="colored" onclick="color(114)"></td>
+                <td class="colored" onclick="color(115)"></td>
+                <td class="colored" onclick="color(116)"></td>
+                <td class="colored" onclick="color(117)"></td>
+                <td class="colored" onclick="color(118)"></td>
+                <td class="colored" onclick="color(119)"></td>
+            </tr>
+            <tr>
+                <td class="colored" onclick="color(120)"></td>
+                <td class="colored" onclick="color(121)"></td>
+                <td class="colored" onclick="color(122)"></td>
+                <td class="colored" onclick="color(123)"></td>
+                <td class="colored" onclick="color(124)"></td>
+                <td class="colored" onclick="color(125)"></td>
+                <td class="colored" onclick="color(126)"></td>
+                <td class="colored" onclick="color(127)"></td>
+                <td class="colored" onclick="color(128)"></td>
+                <td class="colored" onclick="color(129)"></td>
+                <td class="colored" onclick="color(130)"></td>
+                <td class="colored" onclick="color(131)"></td>
+            </tr>
+            <tr>
+                <td class="colored" onclick="color(132)"></td>
+                <td class="colored" onclick="color(133)"></td>
+                <td class="colored" onclick="color(134)"></td>
+                <td class="colored" onclick="color(135)"></td>
+                <td class="colored" onclick="color(136)"></td>
+                <td class="colored" onclick="color(137)"></td>
+                <td class="colored" onclick="color(138)"></td>
+                <td class="colored" onclick="color(139)"></td>
+                <td class="colored" onclick="color(140)"></td>
+                <td class="colored" onclick="color(141)"></td>
+                <td class="colored" onclick="color(142)"></td>
+                <td class="colored" onclick="color(143)"></td>
+            </tr>
 
-        </tr>
-        <tr>
-            <td class="colored" onclick="color(108)"></td>
-            <td class="colored" onclick="color(109)"></td>
-            <td class="colored" onclick="color(110)"></td>
-            <td class="colored" onclick="color(111)"></td>
-            <td class="colored" onclick="color(112)"></td>
-            <td class="colored" onclick="color(113)"></td>
-            <td class="colored" onclick="color(114)"></td>
-            <td class="colored" onclick="color(115)"></td>
-            <td class="colored" onclick="color(116)"></td>
-            <td class="colored" onclick="color(117)"></td>
-            <td class="colored" onclick="color(118)"></td>
-            <td class="colored" onclick="color(119)"></td>
-        </tr>
-        <tr>
-            <td class="colored" onclick="color(120)"></td>
-            <td class="colored" onclick="color(121)"></td>
-            <td class="colored" onclick="color(122)"></td>
-            <td class="colored" onclick="color(123)"></td>
-            <td class="colored" onclick="color(124)"></td>
-            <td class="colored" onclick="color(125)"></td>
-            <td class="colored" onclick="color(126)"></td>
-            <td class="colored" onclick="color(127)"></td>
-            <td class="colored" onclick="color(128)"></td>
-            <td class="colored" onclick="color(129)"></td>
-            <td class="colored" onclick="color(130)"></td>
-            <td class="colored" onclick="color(131)"></td>
-        </tr>
-        <tr>
-            <td class="colored" onclick="color(132)"></td>
-            <td class="colored" onclick="color(133)"></td>
-            <td class="colored" onclick="color(134)"></td>
-            <td class="colored" onclick="color(135)"></td>
-            <td class="colored" onclick="color(136)"></td>
-            <td class="colored" onclick="color(137)"></td>
-            <td class="colored" onclick="color(138)"></td>
-            <td class="colored" onclick="color(139)"></td>
-            <td class="colored" onclick="color(140)"></td>
-            <td class="colored" onclick="color(141)"></td>
-            <td class="colored" onclick="color(142)"></td>
-            <td class="colored" onclick="color(143)"></td>
-        </tr>
-
-    </table>
+        </table>
+    </div>
     <style>
         td {
             border: 1px solid black;
             width: 20px;
             height: 20px;
         }
-        #show{
+
+        #show {
             width: 50px;
             height: 50px;
-            margin: 5px;
+            margin: auto;
         }
-        #heading{
+
+        #drawing-area {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+        }
+
+        #heading {
             Color: #41268b;
-            
+
         }
     </style>
     <script>
         var td = document.getElementsByClassName("colored");
         var hex_color = "#fc23ba";
-        let slideRed=document.getElementById("red");
-        let slideGreen=document.getElementById("green");
-        let slideBlue=document.getElementById("blue");
-        let red=slideRed.value;
-        let green=slideGreen.value;
-        let blue=slideBlue.value;
-        let show= document.getElementById("show");
-        function sliderData(){
-        red=slideRed.value;
-        green=slideGreen.value;
-        blue=slideBlue.value;
-        show.style="background-color: rgb("+red+","+green+","+blue+");";
+        let slideRed = document.getElementById("red");
+        let slideGreen = document.getElementById("green");
+        let slideBlue = document.getElementById("blue");
+        let red = slideRed.value;
+        let green = slideGreen.value;
+        let blue = slideBlue.value;
+        let rdata = document.getElementById("red-data");
+        let gdata = document.getElementById("green-data");
+        let bdata = document.getElementById("blue-data");
+        let show = document.getElementById("show");
+        function sliderData() {
+            red = slideRed.value;
+            green = slideGreen.value;
+            blue = slideBlue.value;
+            rdata.innerText = red;
+            gdata.innerText = green;
+            bdata.innerText = blue;
+            show.style = `background-color: rgb(${red},${green},${blue});`;
         }
-        show.style="background-color: rgb("+red+","+green+","+blue+");";
+        show.style = `background-color: rgb(${red},${green},${blue});`;
         function color(param) {
-            td[param].style = "background-color: rgb(" + red+","+green+","+blue+")";
+            td[param].style = `background-color: rgb(${red},${green},${blue});`;
         }
-        slideBlue.oninput=sliderData;
-        slideGreen.oninput=sliderData;
-        slideRed.oninput=sliderData;
-        
+        slideBlue.oninput = sliderData;
+        slideGreen.oninput = sliderData;
+        slideRed.oninput = sliderData;
+
     </script>
 </body>
+<style>
+    body {
+        text-align: center;
+    }
+
+    #show {
+        margin-left: auto;
+    }
+
+    .card {
+        padding-top: 60px;
+    }
+
+    .color-value {
+        display: inline-flex;
+        height: 40px;
+        width: 40px;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+
+    .color-value>div {
+        margin: auto;
+    }
+
+    
+</style>
 
 </html>
